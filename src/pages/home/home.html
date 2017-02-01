@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic myApp
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <input type="text" [(ngModel)]="hello.fname">
+  <input type="text" [(ngModel)]="hello.lname">
+  {{hello | json}}
+
+</ion-content>
