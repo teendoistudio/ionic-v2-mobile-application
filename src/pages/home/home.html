@@ -1,14 +1,13 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic myApp
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Home</ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <input type="text" [(ngModel)]="hello.fname">
-  <input type="text" [(ngModel)]="hello.lname">
-  {{hello | json}}
+    <button color="primary" (click)="gotoBook()" ion-button>Go to Book</button>
 
 </ion-content>
