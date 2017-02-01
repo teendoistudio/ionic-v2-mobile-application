@@ -15,21 +15,30 @@ export class HomePage {
         fname: 'Sakchai',
         lname: 'Kantada'
     };
+    Personal: Object;
 
     constructor(public navCtrl: NavController, private book: Book) {
 
     }
 
     gotoBook() {
+
         let data = {
             title: 'goto Book',
             name: 'Book Page'
         };
+        /*
         this.navCtrl.push(BookPage, data);
         console.log(this.book.CallBook());
         this.book.CallBookPromise().then((data) => {
             console.log(data);
         });
+        */
+        this.book.CallBookHttp().subscribe((data) => {
+            this.Personal = data;
+        });
+
+
     }
 
 }
