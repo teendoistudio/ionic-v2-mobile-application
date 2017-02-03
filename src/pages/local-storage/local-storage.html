@@ -1,0 +1,49 @@
+<ion-header>
+    <ion-navbar color="danger">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>localStorage</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <!--
+    <button ion-button color="primary" (click)="onAdd()">
+        Add Data to LocalStorage
+    </button>
+    <button ion-button color="secondary" (click)="onViewData()">
+        View Data in LocalStorage
+    </button>
+    <div [hidden]="!BookStorage">
+        {{BookStorage | json}}
+    </div>
+    <button ion-button color="danger" (click)="onDelete('Book')">
+        Delete Data
+    </button>
+    -->
+
+    <ion-list>
+        <ion-item>
+            <ion-label floating>Book Name:</ion-label>
+            <ion-input type="text" [(ngModel)]="Book.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Book Desc:</ion-label>
+            <ion-input type="text" [(ngModel)]="Book.desc"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Book Price:</ion-label>
+            <ion-input type="number" [(ngModel)]="Book.price"></ion-input>
+        </ion-item>
+    </ion-list>
+
+    <div padding>
+        <button ion-button block round full color="primary" (click)="addBook(Book)">
+            Add Data
+        </button>
+    </div>
+
+</ion-content>
+
