@@ -24,20 +24,21 @@ export class HomePage {
     gotoBook() {
 
         let data = {
-            title: 'goto Book',
+            title: 'Go to Book',
             name: 'Book Page'
         };
-        /*
+
         this.navCtrl.push(BookPage, data);
+         /*
         console.log(this.book.CallBook());
         this.book.CallBookPromise().then((data) => {
             console.log(data);
         });
-        */
+
         this.book.CallBookHttp().subscribe((data) => {
             this.Personal = data;
         });
-
+        */
 
     }
 
