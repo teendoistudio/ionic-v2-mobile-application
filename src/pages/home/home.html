@@ -9,10 +9,12 @@
 
 <ion-content padding>
     <button color="primary" (click)="gotoBook()" ion-button>Go to Book</button>
-    <br />
-    ID : <br />
-    Name : <br />
-    Age : <br />
-    Email : <br />
-    Phone :
+
+    <div *ngFor="let p of Personal">
+        ID : {{p.id}} | Name : {{p.name}}<br />
+        Age : {{p.age}} | Email : {{p.email}}<br />
+        Tel : {{p.tel}} | Price : {{p.price | number:'.2'}}<br />
+        Date : {{p.date }}
+    </div>
+
 </ion-content>

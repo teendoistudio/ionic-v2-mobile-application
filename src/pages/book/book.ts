@@ -17,7 +17,7 @@ export class BookPage {
     ionViewDidLoad() {
         this.title = this.navParams.get("title");
         this.name = this.navParams.get("name");
-        //console.log('ionViewDidLoad BookPage');
+        console.log('ionViewDidLoad BookPage');
     }
 
 }

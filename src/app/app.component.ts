@@ -10,7 +10,7 @@ import {LocalStoragePage} from "../pages/local-storage/local-storage";
     templateUrl: 'app.html'
 })
 export class MyApp {
-    rootPage = LocalStoragePage;
+    rootPage = HomePage;
     page: Array<{title: string, component: any}>;
     @ViewChild(Nav) nav: Nav;
 

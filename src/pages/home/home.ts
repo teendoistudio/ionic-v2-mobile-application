@@ -3,7 +3,6 @@ import {NavController} from 'ionic-angular';
 import {BookPage} from "../book/book";
 import {Book} from "../../providers/book";
 
-
 @Component({
     selector: 'page-home',
     templateUrl: 'home.html',
@@ -15,7 +14,7 @@ export class HomePage {
         fname: 'Sakchai',
         lname: 'Kantada'
     };
-    Personal: Object;
+    Personal: any;
 
     constructor(public navCtrl: NavController, private book: Book) {
 
@@ -27,18 +26,19 @@ export class HomePage {
             title: 'Go to Book',
             name: 'Book Page'
         };
-
+        /*
         this.navCtrl.push(BookPage, data);
-         /*
         console.log(this.book.CallBook());
+
         this.book.CallBookPromise().then((data) => {
             console.log(data);
         });
-
-        this.book.CallBookHttp().subscribe((data) => {
-            this.Personal = data;
-        });
         */
+        this.book.CallBookHttp().subscribe(data => {
+            this.Personal = data;
+            //console.log(this.Personal);
+        });
+
 
     }
 

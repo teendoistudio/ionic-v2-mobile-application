@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
-import {map} from "rxjs/operator/map";
+/* import {map} from "rxjs/operator/map"; */
 
 @Injectable()
 export class Book {
@@ -17,6 +17,6 @@ export class Book {
         return Promise.resolve('Hello Book Promise!');
     }
     CallBookHttp(){
-        return this.http.get('http://localhost/angular2-server.php').map((res) => res.json());
+        return this.http.get('http://localhost/angular2-server.php').map(res => res.json());
     }
 }
